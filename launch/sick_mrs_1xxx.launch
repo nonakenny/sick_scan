@@ -8,7 +8,7 @@ default min_angle for this scanner type is  -137.5 degree.
 default max_angle for this scanner type is +137.5 degree.
 -->
 <launch>
-    <arg name="hostname" default="192.168.0.1"/>
+    <arg name="hostname" default="192.168.2.3"/>
     <arg name="cloud_topic" default="cloud"/>
     <arg name="frame_id" default="cloud"/>
     <!-- robot_description and robot_state_publisher is prepared but final STL-model is missing -->
@@ -39,7 +39,8 @@ default max_angle for this scanner type is +137.5 degree.
         <param name="cloud_topic" type="string" value="$(arg cloud_topic)"/>
         <param name="frame_id" type="str" value="$(arg frame_id)"/>
         <param name="sw_pll_only_publish" type="bool" value="true"/>
-
+		<param name="imu_enable" type="bool" value="true"/>
+		
     </node>
 </launch>
         <!--
